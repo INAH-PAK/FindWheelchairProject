@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FindWheelchairProject</string>
+    <string name="chip01">영업중</string>
+    <string name="chip02">공기주입</string>
+    <string name="chip03">휴대폰충전</string>
+    <string name="chip04">동시사용</string>
+    <string name="spinner_prompt">지역선택</string>
+
+
+    <!-- Drawer가 열렸을때/닫혔을때 설명 글씨   -->
+    <string name="drawer_open">사이드 메뉴 open</string>
+    <string name="drawer_close">사이드 메뉴 close</string>
+
+</resources>

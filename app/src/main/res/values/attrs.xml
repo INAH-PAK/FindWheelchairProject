@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="state_cloudy"   format="boolean"/>
+    <attr name="state_sunny"    format="boolean"/>
+    <attr name="state_snowy"    format="boolean"/>
+</resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetDashBoardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="true"
+    app:behavior_draggable="true"
+    app:behavior_peekHeight="500dp"
+    android:background="@drawable/btm_bg"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:id="@+id/btm"
+        android:layout_width="match_parent"
+        android:layout_height="1062dp"
+        android:padding="16dp"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/btm_tv01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="시설명"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btm_tv02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="설치 장소"
+            android:textSize="25dp" />
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="8dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE0EA" />
+
+        <TextView
+            android:id="@+id/btm_tv04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="주소"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/btm_chip01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            android:text="마커 클릭시 우측 하단 버튼 클릭시 GoogleMap으로 이동합니다."
+            android:textColor="#2F000000"
+            android:textSize="10dp"
+            app:chipIcon="@drawable/ic_share_2" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE0EA" />
+
+        <TextView
+            android:id="@+id/btm_tv05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="영업시간"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/btm_tv06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="          평일"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/btm_tv07"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="          주말"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/btm_tv08"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="          공휴일"
+            android:textSize="25dp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE0EA" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="시설 정보"
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/btm_tv09"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="공기 주입 가능 여부 : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/btm_tv10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="휴대폰 충전 가능 여부 : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/btm_tv11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="동시 주입 가능 대수 : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE0EA" />
+
+        <TextView
+            android:id="@+id/btm_tv12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="관리기관 명"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/btm_tv13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="관리기관 전화번호"
+            android:textSize="25dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/btm_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            android:text="전화걸기"
+            android:textSize="30dp"
+            app:chipIcon="@drawable/ic_share_2" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

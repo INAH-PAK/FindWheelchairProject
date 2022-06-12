@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/ic_baseline_cloud_queue_24"
+        app:state_cloudy="true"/>
+    <item android:drawable="@drawable/ic_baseline_cloud_queue_24"
+        app:state_snowy="true" />
+    <item android:drawable="@drawable/ic_baseline_cloud_queue_24"
+        app:state_sunny="true"/>
+</selector>
