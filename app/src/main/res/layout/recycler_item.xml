@@ -11,6 +11,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+
         >
 
         <TextView
@@ -23,7 +25,7 @@
             android:padding="4dp"
             android:text="시설 이름"
             android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
 
@@ -39,31 +41,95 @@
             android:textColor="@color/gray"
             android:textSize="14dp" />
 
+        <ImageView
+            android:id="@+id/iv_clock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv02"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/icon_clock" />
 
-
-        <!--            app:chipMinTouchTargetSize="10dp"-->
-        <com.google.android.material.chip.ChipGroup
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_clock"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv02"
-            android:checkable="true"
-            app:chipMinTouchTargetSize="0dp"
-            app:singleLine="true">
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/iv_clock"
+            android:text="영업"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/iv_air"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv02"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/tv_clock"
+            android:src="@drawable/icon_wind" />
+
+        <TextView
+            android:id="@+id/tv_air"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv02"
+            android:layout_toEndOf="@id/iv_air"
+            android:text="공기주입"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv02"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/tv_air"
+            android:src="@drawable/icon_call" />
 
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip03"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="false"
-                android:gravity="center"
-                android:text="충전불가"
-                app:chipBackgroundColor="#F1F1F1"
-                app:chipIcon="@drawable/ic_mobile_charger_impossible" />
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv02"
+            android:layout_toEndOf="@id/iv_phone"
+            android:text="휴대폰 충전"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_use"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/iv_clock"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/icon_people" />
 
 
+        <TextView
+            android:id="@+id/tv_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_clock"
+            android:layout_toEndOf="@id/iv_use"
+            android:text="동시사용"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"/>
 
-        </com.google.android.material.chip.ChipGroup>
 
 
 

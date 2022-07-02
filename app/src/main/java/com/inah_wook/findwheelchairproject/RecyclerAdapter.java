@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.net.Uri;
 import android.util.Log;
@@ -70,6 +71,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VH> {
         int recyclerPosition = holder.getAdapterPosition();
 
         holder.bindItem(items.get(position));
+
+        // 이미지 색깔 변경
+        // https://leveloper.tistory.com/166
+        holder.itemBinding.ivAir.setColorFilter(Color.parseColor("#FFFFFF"));
 
     }
 

@@ -161,31 +161,6 @@ public class MainActivity extends AppCompatActivity {
         spinner = binding.spinner;
         spinner();
 
-
-
-
-        binding.chip01.setOnClickListener(v->{ // 영업여부
-            //TODO 영업여부 판단해서 코드짜기
-//            String chip01 = "";
-//            loadXmlData(chip01);
-        });
-        binding.chip02.setOnClickListener(v->{ // 공기주입
-
-            if( binding.chip02.isChecked()) loadXmlData("&airInjectorYn = Y");
-
-        });
-        binding.chip03.setOnClickListener(v->{ // 휴대폰 충전
-
-            if( binding.chip03.isChecked())loadXmlData("&moblphonChrstnYn=Y");
-
-        });
-        binding.chip04.setOnClickListener(v->{  // 동시사용
-
-            if( binding.chip04.isChecked())loadXmlData("&smtmUseCo=2");
-
-        });
-
-
         loadXmlData("");
         loadJsonData();
 
@@ -366,16 +341,18 @@ public class MainActivity extends AppCompatActivity {
                                     xpp.next();
                                     if(xmlItems!=null) xmlItems.smtmUseCo= xpp.getText();
                                     xmlItems.smUseB =(xmlItems.smtmUseCo.equals("2")) ? true: false;
+                                    G.useP = (xmlItems.smUseB)?true:false;
 
                                 }else if(tagName.equals("airInjectorYn")){ //공기주입가능여부
                                     xpp.next();
                                     if(xmlItems!=null) xmlItems.airInjectorYn= xpp.getText();
                                     xmlItems.airB = ( xmlItems.airInjectorYn.equals("Y"))? true:false;
-                                }else if(tagName.equals("moblphonChrstnYn")){
+                                    G.airChrge =(xmlItems.airB)? true:false;
+                                }else if(tagName.equals("moblphonChrstnYn")){ //핸드폰 충전 가능 여부
                                     xpp.next();
                                     if(xmlItems!=null) xmlItems.moblphonChrstnYn= xpp.getText();
                                     xmlItems.phoneChargeB = (xmlItems.moblphonChrstnYn.equals("Y"))? true:false;
-
+                                    G.phoneChrge = (xmlItems.phoneChargeB)?true:false;
                                     //시간 설정--------------------------------------------------------------
                                 }else if(tagName.equals("weekdayOperOpenHhmm")){
                                     xpp.next();
