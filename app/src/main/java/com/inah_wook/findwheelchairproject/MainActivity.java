@@ -2,6 +2,7 @@ package com.inah_wook.findwheelchairproject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -108,11 +109,24 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch ( item.getItemId() ){
                     case R.id.menu_aa:
-                        Toast.makeText(MainActivity.this, "aa", Toast.LENGTH_SHORT).show();
+                        // 플레이스토어 등록정보 이동
+                        // 스토어에 등록된 내 앱 딥링크
+                        String playstoreUri = "http://play.google.com/store/apps/details?id=com.inah_wook.findwheelchair";
+                        Intent intentStore = new Intent(Intent.ACTION_VIEW);
+                        intentStore.setData(Uri.parse(playstoreUri));
+                        intentStore.setPackage("com.android.vending");
+                        startActivity(intentStore);
                         break;
 
                     case R.id.menu_bb:
-                        Toast.makeText(MainActivity.this, "bb", Toast.LENGTH_SHORT).show();
+                        // 이메일 보내기 이동
+                        Intent intentMail = new Intent(Intent.ACTION_SEND);
+                        intentMail.setType("*/*");
+                        intentMail.putExtra(Intent.EXTRA_EMAIL, "inahpakkr@gmail.com");
+                        intentMail.putExtra(Intent.EXTRA_SUBJECT, "[휠체어 앱 문의사항]"); // 메일 제목
+                        if (intentMail.resolveActivity(getPackageManager()) != null) {
+                            startActivity(intentMail);
+                        }
                         break;
                 }
 

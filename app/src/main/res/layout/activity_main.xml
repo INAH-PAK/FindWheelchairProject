@@ -15,65 +15,109 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--     툴바     -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         style="@style/MyToolbarStyle"
         android:theme="@style/MyToolbarTheme">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_weather"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon_sun"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/iv_weather"
+                android:text="맑음"
+                android:textSize="24dp"
+                android:textStyle="italic" />
+
 <!--  TODO. 날씨 API 넣기.      -->
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent"-->
-        <!--            android:orientation="vertical">-->
-        <!--        <com.google.android.material.chip.ChipGroup-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:chipSpacingHorizontal="20dp"-->
-        <!--            app:layout_scrollFlags="noScroll"-->
-        <!--            app:singleLine="true">-->
 
-        <!--            <com.google.android.material.chip.Chip-->
-        <!--                android:id="@+id/chip01"-->
-        <!--                android:layout_marginLeft="10dp"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:checkable="true"-->
-        <!--                android:text="@string/chip01" />-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_weather"
+                android:scrollbars="horizontal">
 
-        <!--            <com.google.android.material.chip.Chip-->
-        <!--                android:id="@+id/chip02"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:checkable="true"-->
-        <!--                android:text="@string/chip02" />-->
 
-        <!--            <com.google.android.material.chip.Chip-->
-        <!--                android:id="@+id/chip03"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:checkable="true"-->
-        <!--                android:text="@string/chip03"-->
-        <!--                android:textAlignment="center" />-->
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_weather"
+                app:chipSpacingHorizontal="5dp"
+                app:layout_scrollFlags="noScroll"
+                app:singleLine="true">
 
-        <!--            <com.google.android.material.chip.Chip-->
-        <!--                android:id="@+id/chip04"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:checkable="true"-->
-        <!--                android:text="@string/chip04"-->
-        <!--                android:textAlignment="center" />-->
-        <!--        </com.google.android.material.chip.ChipGroup>-->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:checkable="true"
+                    android:text="@string/chip01"
+                    android:textSize="13dp"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipIcon="@drawable/icon_clock" />
 
-        <!--        </LinearLayout>-->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/chip02"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:text="(TEST)오늘의 날씨 맑음 "
-            android:textStyle="italic"
-            android:layout_margin="10dp"/>
+                    android:textSize="13dp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipIcon="@drawable/icon_wind" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/chip03"
+                    android:textAlignment="center"
+                    android:textSize="13dp"
+
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipIcon="@drawable/icon_smartphone" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/chip04"
+                    android:textAlignment="center"
+                    android:textSize="13dp"
+
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipIcon="@drawable/icon_people" />
+            </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+                </RelativeLayout>
+
+
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -82,7 +126,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -100,6 +144,7 @@
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/spinner"
             android:id="@+id/progressbar"
             android:layout_gravity="center_horizontal"
             />
@@ -108,6 +153,8 @@
                 android:id="@+id/recycler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@id/spinner"
+
                 android:layout_margin="4dp"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -115,7 +162,7 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.core.widget.NestedScrollView>

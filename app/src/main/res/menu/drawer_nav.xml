@@ -4,24 +4,21 @@
     <!-- group으로 묶어주면 구분선이 그어짐 [단, id를 지정해야 함]  -->
     <group android:id="@+id/g1">
         <item android:id="@+id/menu_aa"
-            android:title="계정 정보"
+            android:title="앱 정보"
             android:icon="@drawable/ic_baseline_perm_identity_24"/>
         <item android:id="@+id/menu_bb"
-            android:title="내 프로필 설정"/>
+            android:title="개발자 연락처"/>
     </group>
 
-    <item android:id="@+id/menu_cc"
-        android:title="추가 예정"/>
-
     <!-- 구분선을 그려주면서 title도 쓸 수 있는 방법-->
-    <item android:title="설정">
-        <menu>
-            <item android:id="@+id/menu_ss"
-                android:title="추가예정"/>
-            <item android:id="@+id/menu_tt"
-                android:title="추가예정"/>
-        </menu>
-    </item>
+<!--    <item android:title="설정">-->
+<!--        <menu>-->
+<!--            <item android:id="@+id/menu_ss"-->
+<!--                android:title="추가예정"/>-->
+<!--            <item android:id="@+id/menu_tt"-->
+<!--                android:title="추가예정"/>-->
+<!--        </menu>-->
+<!--    </item>-->
 
 
 </menu>

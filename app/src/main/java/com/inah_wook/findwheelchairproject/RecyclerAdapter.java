@@ -74,7 +74,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VH> {
 
         // 이미지 색깔 변경
         // https://leveloper.tistory.com/166
-        holder.itemBinding.ivAir.setColorFilter(Color.parseColor("#FFFFFF"));
+        // 결론 : (우선순위) setColorFilter > imageTintList
+
+        if(G.airChrge) holder.itemBinding.ivAir.setColorFilter(Color.GREEN);
+        else  holder.itemBinding.ivAir.setColorFilter(Color.RED);
+
+        if(G.phoneChrge) holder.itemBinding.ivPhone.setColorFilter(Color.GREEN);
+        else holder.itemBinding.ivPhone.setColorFilter(Color.RED);
+
+        if(G.useP) holder.itemBinding.ivUse.setColorFilter(Color.GREEN);
+        else holder.itemBinding.ivUse.setColorFilter(Color.RED);
+
+
 
     }
 

@@ -177,7 +177,7 @@
             android:padding="10dp"
             android:text="전화걸기"
             android:textSize="30dp"
-            app:chipIcon="@drawable/ic_share_2" />
+            app:chipIcon="@drawable/icon_call" />
 
 
     </LinearLayout>
