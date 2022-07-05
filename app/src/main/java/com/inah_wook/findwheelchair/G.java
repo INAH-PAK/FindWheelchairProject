@@ -1,8 +1,8 @@
-package com.inah_wook.findwheelchairproject;
+package com.inah_wook.findwheelchair;
 
 public class G {
 
-    public static boolean open = false;
+    public static boolean OPEN = false;
     public static boolean airChrge = false;
     public static boolean phoneChrge = false;
     public static boolean useP = false;

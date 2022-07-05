@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FindWheelchairProject</string>
+    <string name="app_name">FindWheelchair</string>
     <string name="chip01">영업중</string>
     <string name="chip02">공기주입</string>
     <string name="chip03">휴대폰충전</string>

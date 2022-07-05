@@ -1,4 +1,4 @@
-package com.inah_wook.findwheelchairproject;
+package com.inah_wook.findwheelchair;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.inah_wook.findwheelchairproject.databinding.ActivityBackBinding;
+import com.inah_wook.findwheelchair.databinding.ActivityBackBinding;
 
 public class BackActivity extends AppCompatActivity {
     // 뒤로가기 키를 누르면 나올 화면

@@ -9,31 +9,31 @@
         android:id="@+id/header_iv"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/ic_launcher_foreground"
-        app:civ_circle_background_color="#E4E4E4"
-        app:civ_border_width="1dp"
-        app:civ_border_color="@color/white"
-        android:layout_margin="16dp"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/logo"
+        app:civ_border_width="0dp"
+        app:civ_circle_background_color="#FFF6A8" />
 
     <TextView
         android:id="@+id/header_tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ANDROID"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:padding="4dp"
         android:layout_below="@id/header_iv"
-        android:layout_marginLeft="8dp"/>
-    <TextView
-        android:id="@+id/header_tv_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="android@google.com"
-        android:textColor="@color/black"
-        android:layout_below="@id/header_tv_name"
+        android:layout_marginLeft="8dp"
         android:padding="4dp"
-        android:layout_marginLeft="8dp"/>
+        android:text="전국 장애인 휠체어 찾기"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/header_tv_name"
+        android:layout_margin="15dp"
+        />
+
 
 </RelativeLayout>

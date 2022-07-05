@@ -1,4 +1,4 @@
-package com.inah_wook.findwheelchairproject;
+package com.inah_wook.findwheelchair;
 
 import org.junit.Test;
 

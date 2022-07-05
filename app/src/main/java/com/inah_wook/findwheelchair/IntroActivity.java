@@ -1,4 +1,4 @@
-package com.inah_wook.findwheelchairproject;
+package com.inah_wook.findwheelchair;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.animation.AnimationUtils;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.inah_wook.findwheelchairproject.databinding.ActivityIntroBinding;
+import com.inah_wook.findwheelchair.databinding.ActivityIntroBinding;
 
 public class IntroActivity extends AppCompatActivity {
     // 시작시 4초간 뜨는 인트로 화면

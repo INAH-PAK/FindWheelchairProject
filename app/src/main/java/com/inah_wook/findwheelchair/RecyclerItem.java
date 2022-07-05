@@ -1,22 +1,11 @@
-package com.inah_wook.findwheelchairproject;
+package com.inah_wook.findwheelchair;
 
 
 
-import android.icu.text.SimpleDateFormat;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Calendar;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-// import com.inah_wook.findwheelchairproject.databinding.RecyclerItemBinding;
-
-import java.util.Date;
 
 public class RecyclerItem {
 

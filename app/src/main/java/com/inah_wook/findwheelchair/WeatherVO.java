@@ -1,4 +1,4 @@
-package com.inah_wook.findwheelchairproject;
+package com.inah_wook.findwheelchair;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

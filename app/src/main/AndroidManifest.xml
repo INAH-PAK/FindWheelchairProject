@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.inah_wook.findwheelchairproject">
+    package="com.inah_wook.findwheelchair">
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE"/>
@@ -17,14 +17,14 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/pngegg"
         android:supportsRtl="true"
         android:theme="@style/Theme.FindWheelchairProject"
         android:usesCleartextTraffic="true">
 
 <!--        인트로 화면 activity -->
         <activity
-            android:name=".IntroActivity"
+            android:name="com.inah_wook.findwheelchair.IntroActivity"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
@@ -35,11 +35,11 @@
         </activity>
 <!--        메인 화면 activity-->
         <activity
-            android:name=".MainActivity"
+            android:name="com.inah_wook.findwheelchair.MainActivity"
             android:exported="true"/>
 
 <!--        뒤로가기 버튼을 클릭하면 나오는 activity-->
-        <activity android:name=".BackActivity"
+        <activity android:name="com.inah_wook.findwheelchair.BackActivity"
             android:exported="true"/>
 
         <!--        1.플레이 서비스 버전 번호 등록 -->
